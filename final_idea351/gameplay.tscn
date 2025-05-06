@@ -1,0 +1,159 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxhkv5gnhm7te"]
+
+[ext_resource type="Script" uid="uid://bkparu14an1in" path="res://slider_box.gd" id="1_n4psk"]
+[ext_resource type="Texture2D" uid="uid://m8g21co5ra5h" path="res://GFX/CompleteImage.png" id="2_ej4tk"]
+[ext_resource type="Texture2D" uid="uid://drieoi378ef25" path="res://GFX/SliderBG.PNG" id="2_oe8ih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej4tk"]
+size = Vector2(624, 624)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe8ih"]
+atlas = ExtResource("2_ej4tk")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej4tk"]
+atlas = ExtResource("2_ej4tk")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuee5"]
+atlas = ExtResource("2_ej4tk")
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="ColorBG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.644817, 0.396728, 0.515071, 1)
+
+[node name="SliderBox" type="Area2D" parent="."]
+script = ExtResource("1_n4psk")
+
+[node name="SliderBG" type="TextureRect" parent="SliderBox"]
+offset_right = 624.0
+offset_bottom = 624.0
+mouse_filter = 2
+texture = ExtResource("2_oe8ih")
+
+[node name="SliderCollision" type="CollisionShape2D" parent="SliderBox"]
+position = Vector2(312, 312)
+shape = SubResource("RectangleShape2D_ej4tk")
+
+[node name="Tile1" type="Sprite2D" parent="SliderBox"]
+position = Vector2(78, 78)
+texture = SubResource("AtlasTexture_oe8ih")
+hframes = 4
+vframes = 4
+
+[node name="Tile2" type="Sprite2D" parent="SliderBox"]
+position = Vector2(234, 78)
+texture = SubResource("AtlasTexture_ej4tk")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="Tile3" type="Sprite2D" parent="SliderBox"]
+position = Vector2(390, 78)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 2
+
+[node name="Tile4" type="Sprite2D" parent="SliderBox"]
+position = Vector2(546, 78)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 3
+
+[node name="Tile5" type="Sprite2D" parent="SliderBox"]
+position = Vector2(78, 234)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="Tile6" type="Sprite2D" parent="SliderBox"]
+position = Vector2(234, 234)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 5
+
+[node name="Tile7" type="Sprite2D" parent="SliderBox"]
+position = Vector2(390, 234)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="Tile8" type="Sprite2D" parent="SliderBox"]
+position = Vector2(546, 234)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 7
+
+[node name="Tile9" type="Sprite2D" parent="SliderBox"]
+position = Vector2(78, 390)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 8
+
+[node name="Tile10" type="Sprite2D" parent="SliderBox"]
+position = Vector2(234, 390)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 9
+
+[node name="Tile11" type="Sprite2D" parent="SliderBox"]
+position = Vector2(390, 390)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 10
+
+[node name="Tile12" type="Sprite2D" parent="SliderBox"]
+position = Vector2(546, 390)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 11
+
+[node name="Tile13" type="Sprite2D" parent="SliderBox"]
+position = Vector2(78, 546)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 12
+
+[node name="Tile14" type="Sprite2D" parent="SliderBox"]
+position = Vector2(234, 546)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 13
+
+[node name="Tile15" type="Sprite2D" parent="SliderBox"]
+position = Vector2(390, 546)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 14
+
+[node name="Tile16" type="Sprite2D" parent="SliderBox"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(546, 546)
+texture = SubResource("AtlasTexture_xuee5")
+hframes = 4
+vframes = 4
+frame = 15
+
+[connection signal="input_event" from="SliderBox" to="SliderBox" method="_on_input_event"]
+[connection signal="mouse_entered" from="SliderBox" to="SliderBox" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SliderBox" to="SliderBox" method="_on_mouse_exited"]
