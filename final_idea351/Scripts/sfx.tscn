@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxrjh6d3h3j3f"]
+
+[ext_resource type="Script" uid="uid://bsadckop5yf0n" path="res://Scripts/sfx.gd" id="1_b1umu"]
+[ext_resource type="AudioStream" uid="uid://bqs4y3q0uw6fe" path="res://SFX/EvilLaugh.ogg" id="2_i7n3f"]
+[ext_resource type="AudioStream" uid="uid://bnpcqskigjlht" path="res://SFX/FlipSwitch.ogg" id="3_y1stj"]
+[ext_resource type="AudioStream" uid="uid://cu28c6vvav66d" path="res://SFX/Slide1.ogg" id="4_eu0py"]
+[ext_resource type="AudioStream" uid="uid://doplxhjb74ysf" path="res://SFX/Slide2.ogg" id="5_r0hsv"]
+[ext_resource type="AudioStream" uid="uid://c4ligjkpijmdh" path="res://SFX/Slide3.ogg" id="6_f16gr"]
+[ext_resource type="AudioStream" uid="uid://c7ty5oyc1mkn5" path="res://SFX/Whoosh.ogg" id="7_u7t1x"]
+
+[node name="SFX" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b1umu")
+
+[node name="EvilLaugh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_i7n3f")
+
+[node name="FlipSwitch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_y1stj")
+
+[node name="Slide1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_eu0py")
+
+[node name="Slide2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r0hsv")
+
+[node name="Slide3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_f16gr")
+
+[node name="Whoosh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_u7t1x")

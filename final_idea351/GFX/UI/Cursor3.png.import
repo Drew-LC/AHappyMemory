@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drieoi378ef25"
-path="res://.godot/imported/SliderBG.PNG-c44b6a86a4c85e54ae892715207b70c8.ctex"
+uid="uid://o20vsuupdtxy"
+path="res://.godot/imported/Cursor3.png-01745a0c6a0c39dccd18f0b254142eb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/SliderBG.PNG"
-dest_files=["res://.godot/imported/SliderBG.PNG-c44b6a86a4c85e54ae892715207b70c8.ctex"]
+source_file="res://GFX/UI/Cursor3.png"
+dest_files=["res://.godot/imported/Cursor3.png-01745a0c6a0c39dccd18f0b254142eb1.ctex"]
 
 [params]
 

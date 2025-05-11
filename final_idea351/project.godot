@@ -11,17 +11,19 @@ config_version=5
 [application]
 
 config/name="final_idea351"
-run/main_scene="uid://bxhkv5gnhm7te"
+run/main_scene="uid://s6bvf8aypcpj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalStats="*res://global_stats.gd"
-Sfx="*res://sfx.tscn"
+Sfx="*res://Scripts/sfx.tscn"
+Cursor="*res://Scripts/cursor.gd"
+Bgm="*res://Scripts/bgm.tscn"
+GlobalStats="*res://Scripts/global_stats.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
+window/stretch/mode="viewport"

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://ha1wl67yyo2r"]
+
+[ext_resource type="AudioStream" uid="uid://2lhddbjxcfre" path="res://BGM/DarkShadows.ogg" id="1_kymvl"]
+[ext_resource type="AudioStream" uid="uid://b1ju7vhjs3h8l" path="res://BGM/ChildrenOfTheNight.ogg" id="2_4ymnr"]
+[ext_resource type="AudioStream" uid="uid://70k3l6qxwlv0" path="res://BGM/Silence.ogg" id="3_2gsja"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_18kcr"]
+clip_count = 3
+clip_0/name = &"Main"
+clip_0/stream = ExtResource("1_kymvl")
+clip_0/auto_advance = 0
+clip_1/name = &"End"
+clip_1/stream = ExtResource("2_4ymnr")
+clip_1/auto_advance = 0
+clip_2/name = &"Silence"
+clip_2/stream = ExtResource("3_2gsja")
+clip_2/auto_advance = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 3.0,
+"fade_mode": 3,
+"from_time": 0,
+"to_time": 2
+},
+Vector2i(0, 0): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamInteractive_18kcr")

@@ -1,0 +1,189 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0w1lj0juu0e3"]
+
+[ext_resource type="Script" uid="uid://c55doh60ks3j0" path="res://Placeholder/slider_puzzle_backup.gd" id="1_yq4qh"]
+[ext_resource type="Texture2D" uid="uid://m8g21co5ra5h" path="res://GFX/Gameplay/CompleteImage.png" id="2_4h4pg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t53ln"]
+size = Vector2(1000, 1000)
+
+[node name="SliderPuzzle" type="Area2D"]
+script = ExtResource("1_yq4qh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(500, 500)
+shape = SubResource("RectangleShape2D_t53ln")
+
+[node name="Tile1" type="Sprite2D" parent="."]
+position = Vector2(100, 100)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+
+[node name="Tile2" type="Sprite2D" parent="."]
+position = Vector2(300, 100)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 1
+
+[node name="Tile3" type="Sprite2D" parent="."]
+position = Vector2(500, 100)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 2
+
+[node name="Tile4" type="Sprite2D" parent="."]
+position = Vector2(700, 100)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 3
+
+[node name="Tile5" type="Sprite2D" parent="."]
+position = Vector2(900, 100)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 4
+
+[node name="Tile6" type="Sprite2D" parent="."]
+position = Vector2(100, 300)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 5
+
+[node name="Tile7" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 6
+
+[node name="Tile8" type="Sprite2D" parent="."]
+position = Vector2(500, 300)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 7
+
+[node name="Tile9" type="Sprite2D" parent="."]
+position = Vector2(700, 300)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 8
+
+[node name="Tile10" type="Sprite2D" parent="."]
+position = Vector2(900, 300)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 9
+
+[node name="Tile11" type="Sprite2D" parent="."]
+position = Vector2(100, 500)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 10
+
+[node name="Tile12" type="Sprite2D" parent="."]
+position = Vector2(300, 500)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 11
+
+[node name="Tile13" type="Sprite2D" parent="."]
+position = Vector2(500, 500)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 12
+
+[node name="Tile14" type="Sprite2D" parent="."]
+position = Vector2(700, 500)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 13
+
+[node name="Tile15" type="Sprite2D" parent="."]
+position = Vector2(900, 500)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 14
+
+[node name="Tile16" type="Sprite2D" parent="."]
+position = Vector2(100, 700)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 15
+
+[node name="Tile17" type="Sprite2D" parent="."]
+position = Vector2(300, 700)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 16
+
+[node name="Tile18" type="Sprite2D" parent="."]
+position = Vector2(500, 700)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 17
+
+[node name="Tile19" type="Sprite2D" parent="."]
+position = Vector2(700, 700)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 18
+
+[node name="Tile20" type="Sprite2D" parent="."]
+position = Vector2(900, 700)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 19
+
+[node name="Tile21" type="Sprite2D" parent="."]
+position = Vector2(100, 900)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 20
+
+[node name="Tile22" type="Sprite2D" parent="."]
+position = Vector2(300, 900)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 21
+
+[node name="Tile23" type="Sprite2D" parent="."]
+position = Vector2(500, 900)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 22
+
+[node name="Tile24" type="Sprite2D" parent="."]
+position = Vector2(700, 900)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 23
+
+[node name="Tile25" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(900, 900)
+texture = ExtResource("2_4h4pg")
+hframes = 5
+vframes = 5
+frame = 24

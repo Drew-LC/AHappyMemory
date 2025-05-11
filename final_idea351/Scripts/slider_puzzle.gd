@@ -3,48 +3,54 @@ extends Area2D
 var tiles = []
 var solved = []
 var mouse = false
-var isin = false
 var emptytile
-var numtiles = 16
+var numtiles = 25
 var numrowcol = sqrt(numtiles)
-var tilesize = 156
+var tilesize = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	tiles = [$Tile1, $Tile2, $Tile3, $Tile4,
-			 $Tile5, $Tile6, $Tile7, $Tile8,
-			 $Tile9, $Tile10, $Tile11, $Tile12,
-			 $Tile13, $Tile14, $Tile15, $Tile16] #Tile16 is the empty tile
+	start_game()
+
+func start_game():
+	tiles = [$Tile1, $Tile2, $Tile3, $Tile4, $Tile5,
+			 $Tile6, $Tile7, $Tile8, $Tile9, $Tile10,
+			 $Tile11, $Tile12, $Tile13, $Tile14, $Tile15,
+			 $Tile16, $Tile17, $Tile18, $Tile19, $Tile20,
+			 $Tile21, $Tile22, $Tile23, $Tile24, $Tile25]
 	solved = tiles.duplicate()
-	emptytile = $Tile16
+	emptytile = $Tile25#tiles.pick_random()
+	#tilesize = emptytile.texture.get_size().x / numrowcol
 	shuffle_tiles()
 	
 func shuffle_tiles():
 	var previous = 99
 	var previous_1 = 98
-	for t in range(0,1000):
+	var previous_2 = 97
+	for t in range(0,5000):
 		var tile = randi() % numtiles
-		if tiles[tile] != emptytile and tile != previous and tile != previous_1:
+		if tiles[tile] != emptytile and tile != previous and tile != previous_1 and tile != previous_2:
 			var rows = int(tiles[tile].position.y / tilesize)
 			var cols = int(tiles[tile].position.x / tilesize)
 			check_neighbours(rows,cols)
+			previous_2 = previous_1
 			previous_1 = previous
 			previous = tile
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and mouse:# and isin == true:
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and mouse:
 		var mouse_copy = mouse
+		#print(mouse.position)
 		mouse = false
 		mouse_copy.position.x -= self.position.x
 		mouse_copy.position.y -= self.position.y
 		var rows = int(mouse_copy.position.y / tilesize)
 		var cols = int(mouse_copy.position.x / tilesize)
+		#print(str(rows) + ", " + str(cols))
 		check_neighbours(rows,cols)
 		if tiles == solved:
 			print("You win!")
-	if mouse == true:
-		print("MOUSE")
 
 func check_neighbours(rows, cols):
 	var empty = false
@@ -70,9 +76,9 @@ func check_neighbours(rows, cols):
 			new_pos.x += tilesize
 		done = true
 			
-func find_empty(new_position, pos):
-	var new_rows = int(new_position.y / tilesize)
-	var new_cols = int(new_position.x / tilesize)
+func find_empty(newposition,pos):
+	var new_rows = int(newposition.y / tilesize)
+	var new_cols = int(newposition.x / tilesize)
 	var new_pos = new_rows * numrowcol + new_cols
 	if tiles[new_pos] == emptytile:
 		swap_tiles(pos, new_pos)
@@ -87,19 +93,21 @@ func swap_tiles(tile_src, tile_dst):
 	var temp_tile = tiles[tile_src]
 	tiles[tile_src] = tiles[tile_dst]
 	tiles[tile_dst] = temp_tile
-	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		#Sfx.play_sound()
-
-func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		match randi_range(0, 2):
+			0:
+				Sfx.play_sound("Slide1")
+			1:
+				Sfx.play_sound("Slide2")
+			2:
+				Sfx.play_sound("Slide3")
+	
+func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		mouse = event
-	else:
-		print("DING")
 
 func _on_mouse_entered() -> void:
-	isin = true
-	print("I am in")
+	Cursor.ishighlight = true
 
 func _on_mouse_exited() -> void:
-	isin = false
-	print("I am out")
+	Cursor.ishighlight = false
