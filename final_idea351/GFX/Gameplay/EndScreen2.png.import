@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct1hk2xj22woo"
-path="res://.godot/imported/Cursor4.png-931bc4df3eac79093eab10f35d8d60da.ctex"
+uid="uid://eejomvplmqw4"
+path="res://.godot/imported/EndScreen2.png-9b9f31965728b1d40ac6a044b186605f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/UI/Cursor4.png"
-dest_files=["res://.godot/imported/Cursor4.png-931bc4df3eac79093eab10f35d8d60da.ctex"]
+source_file="res://GFX/Gameplay/EndScreen2.png"
+dest_files=["res://.godot/imported/EndScreen2.png-9b9f31965728b1d40ac6a044b186605f.ctex"]
 
 [params]
 

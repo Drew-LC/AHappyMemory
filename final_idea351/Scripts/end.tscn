@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgdjl71qsb6fr"]
+
+[ext_resource type="Texture2D" uid="uid://c2qsykxegj153" path="res://GFX/Gameplay/EndScreen1.png" id="1_7uudw"]
+[ext_resource type="Texture2D" uid="uid://eejomvplmqw4" path="res://GFX/Gameplay/EndScreen2.png" id="2_kt756"]
+[ext_resource type="Shader" uid="uid://dn02ec3p40eos" path="res://Scripts/vhs.gdshader" id="4_fc8qb"]
+
+[sub_resource type="GDScript" id="GDScript_kt756"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$End.play(\"default\", 0.2)
+	await get_tree().create_timer(10.0).timeout
+	get_tree().quit()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fc8qb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7uudw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kt756")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxdla"]
+shader = ExtResource("4_fc8qb")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 15
+
+[node name="End" type="Node2D"]
+script = SubResource("GDScript_kt756")
+
+[node name="End" type="AnimatedSprite2D" parent="."]
+position = Vector2(965.5, 542.5)
+scale = Vector2(1.76759, 1.49306)
+sprite_frames = SubResource("SpriteFrames_fc8qb")
+
+[node name="Black" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Shader" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_vxdla")
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

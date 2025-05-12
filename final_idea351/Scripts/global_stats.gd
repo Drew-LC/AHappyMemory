@@ -1,6 +1,6 @@
 extends Control
 
-var switchoneflipped = false
+var switchoneflipped = true
 var switchtwoflipped  = false
 var switchthreeflipped  = false
 var puzzleonesolved = false
