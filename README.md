@@ -1,6 +1,6 @@
 A very quick slider puzzle game with a secret: “A Happy Memory”.
 
-Created by SHuang (artist) and Roamer Monkey (programmer) for a final project for a university game course using Godot 4.4.
+Created by SHuang (artist) and me (programmer) for a final project for a university game course using Godot 4.4.
 
 I used royalty-free music from Purple Planet and sound effects from Freesound. Generative AI was not used in the creation of this game.
 
