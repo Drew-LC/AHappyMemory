@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dtponi73ack7y"
+path="res://.godot/imported/PixelPlayBitmap.png-2317ecf1f605f4d485ad0538fe99d13b.res"
+
+[deps]
+
+source_file="res://GFX/UI/PixelPlayBitmap.png"
+dest_files=["res://.godot/imported/PixelPlayBitmap.png-2317ecf1f605f4d485ad0538fe99d13b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
